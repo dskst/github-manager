@@ -1,0 +1,12 @@
+name: Member manager
+on: push
+jobs:
+  member_manage:
+    runs-on: ubuntu-latest
+    name: Invite member
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Is exist member 
+        id: 
+        uses: ./.github/actions/exist_member
