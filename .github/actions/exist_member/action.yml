@@ -2,4 +2,4 @@ name: Exist Member
 description: Is exist member at GitHub.com
 runs:
   using: node12
-  main: runs/dist/exist_member.js
+  main: runs/dist/index.js

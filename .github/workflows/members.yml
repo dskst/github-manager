@@ -8,5 +8,4 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
       - name: Is exist member 
-        id: 
         uses: ./.github/actions/exist_member
