@@ -1,4 +1,4 @@
-name: Member manager
+name: Member Manager
 on: push
 jobs:
   member_manage:
