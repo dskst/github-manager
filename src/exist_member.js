@@ -5,7 +5,7 @@ const { Hoge } = require('./module/hoge');
 const run = async () => {
     try {
         console.log('Hello');
-        console.log(new Hoge().getHoge());
+        console.log(new Hoge().getHoge() + 'aaaa');
         Promise.resolve(true);
     } catch (error) {
         core.setFailed(error.message);
