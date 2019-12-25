@@ -6,6 +6,7 @@ const run = async () => {
     try {
         console.log('Hello');
         console.log(new Hoge().getHoge() + 'aaaa');
+        console.log('Hello2');
         Promise.resolve(true);
     } catch (error) {
         core.setFailed(error.message);
