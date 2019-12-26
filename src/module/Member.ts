@@ -1,4 +1,4 @@
-class Hoge {
+class Member {
 
     constructor() {
     }
@@ -8,4 +8,4 @@ class Hoge {
     }
 }
 
-export = Hoge;
+export = Member;
