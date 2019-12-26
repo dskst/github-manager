@@ -11,11 +11,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const core = __importStar(require("@actions/core"));
-const hoge_1 = __importDefault(require("./module/hoge"));
+const Member_1 = __importDefault(require("./module/Member"));
 const run = async () => {
     try {
         console.log('Hello');
-        console.log(new hoge_1.default().getHoge() + 'aaaa');
+        console.log(new Member_1.default().getHoge() + 'aaaa');
         console.log('Hello2');
         core.info('core info message');
     }
