@@ -1,16 +1,14 @@
-const core = require('@actions/core');
-const github = require('@actions/github');
-const { Hoge } = require('./module/hoge');
+import core from '@actions/core';
+import github from '@actions/github';
+import Hoge from './module/hoge';
 
 const run = async () => {
     try {
         console.log('Hello');
         console.log(new Hoge().getHoge() + 'aaaa');
         console.log('Hello2');
-        Promise.resolve(true);
     } catch (error) {
         core.setFailed(error.message);
-        PromiseRejectionEvent(false);
     }
 }
 
