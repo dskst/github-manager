@@ -2,8 +2,8 @@
 class Member {
     constructor() {
     }
-    getHoge() {
-        return 'hoge';
+    isExists() {
+        return true;
     }
 }
 module.exports = Member;
