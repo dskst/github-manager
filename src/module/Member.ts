@@ -1,10 +1,13 @@
+import * as github from '@actions/github';
+import { returnStatement } from '@babel/types';
+
 class Member {
 
     constructor() {
     }
 
-    getHoge() {
-        return 'hoge';   
+    public isExists(): boolean {
+        return true;
     }
 }
 

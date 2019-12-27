@@ -1,5 +1,9 @@
 import Member from '../../src/module/Member';
 
-test('exist member', () => {
-     return expect(new Member().getHoge()).toBe('hoge');
+describe('Member', () => {
+     describe('isExists', () => {
+          test('Is exist on GitHub', () => {
+               return expect(new Member().isExists()).toBeTruthy();
+          })
+     })
 });
