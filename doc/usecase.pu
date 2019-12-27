@@ -1,0 +1,16 @@
+@startuml usecase
+
+left to right direction
+actor Member
+actor Applicant
+actor Authorizer
+note bottom of Authorizer : Create a team in advance
+rectangle GitHub {
+    Member .> Applicant : <<include>>
+    (Invite to team) <. (Authorize for an account) : <<extends>>
+    (Authorize for an account) -- Authorizer : Merge pull request
+    (Reject for an account) -- Authorizer
+    Applicant -- (Apply for an account) : Pull request
+}
+
+@enduml
