@@ -1,0 +1,16 @@
+@startuml object
+
+object Member
+Member : token
+Member : userId
+
+object GithubAccount
+GithubAccount : userName
+GithubAccount : mailAddress
+
+object MailAddress
+MailAddress : mailAddress
+
+GithubAccount o-- MailAddress
+
+@enduml
