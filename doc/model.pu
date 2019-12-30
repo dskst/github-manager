@@ -12,6 +12,9 @@ rectangle Github {
     }
 }
 
+object UserName
+UserName : userName
+
 object MailAddress 
 MailAddress : mailAddress
 
@@ -22,6 +25,7 @@ object OrgId
 OrgId : orgId
 
 Member <|-- GithubAccount
+GithubAccount o-- UserName
 GithubAccount o-- MailAddress
 GithubAccount o-- TeamId
 GithubAccount o-- OrgId
