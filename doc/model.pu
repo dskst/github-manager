@@ -1,16 +1,29 @@
 @startuml object
 
-object Member
-Member : token
-Member : userId
+object Member {
+}
 
-object GithubAccount
-GithubAccount : userName
-GithubAccount : mailAddress
+rectangle Github {
+    object GithubAccount {
+        userName
+        mailAddress
+        orgId
+        teamId
+    }
+}
 
-object MailAddress
+object MailAddress 
 MailAddress : mailAddress
 
+object TeamId
+TeamId : teamId
+
+object OrgId
+OrgId : orgId
+
+Member <|-- GithubAccount
 GithubAccount o-- MailAddress
+GithubAccount o-- TeamId
+GithubAccount o-- OrgId
 
 @enduml
