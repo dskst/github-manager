@@ -1,5 +1,3 @@
-import * as github from '@actions/github';
-
 class Member {
 
     constructor() {
