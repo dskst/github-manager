@@ -7,10 +7,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-      - name: Run tests
-        run: npm test
       - name: Install node modules
         run: npm ci
+      - name: Run tests
+        run: npm test
       - name: Compile JavaScript
         run: tsc
       - name: Is exist member 
