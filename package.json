@@ -21,16 +21,21 @@
   "homepage": "https://github.com/dskst/github-manager#readme",
   "description": "GitHub management, use git",
   "dependencies": {
-    "@actions/core": "^1.2.0",
-    "@actions/github": "^2.0.0"
+    "@actions/core": "^1.2.1",
+    "@actions/github": "^2.0.1",
+    "inversify": "^5.0.1",
+    "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.24",
+    "@types/jest": "^24.9.0",
+    "http-proxy-agent": "^3.0.0",
+    "https-proxy-agent": "^4.0.0",
     "jest": "^24.9.0",
-    "ts-jest": "^24.2.0",
+    "ts-jest": "^24.3.0",
     "typescript": "^3.7.4"
   },
   "jest": {
+    "setupFiles": ["./jest-setup-file.ts"],
     "moduleFileExtensions": [
       "ts",
       "js"
