@@ -2,7 +2,7 @@
     "compilerOptions": {
         "module": "commonjs",
         "target": "ES2019",
-        // "types": ["reflect-metadata"],
+        "lib": ["ES2019"],
         "esModuleInterop": true,
         "outDir": "./dist",
         "moduleResolution": "node",
@@ -10,7 +10,7 @@
         "emitDecoratorMetadata": true
     },
     "include": [
-        "src/*"
+        "src/*", "src/runner/exist_member.ts"
     ],
     "exclude": [
         "node_module"

@@ -1,12 +1,18 @@
+import { injectable } from 'inversify'
+import Member from '../../entity/repository/MemberRepository'
 import * as github from '@actions/github';
-const HttpsProxyAgent = require("https-proxy-agent");
 
-class Member {
+// const HttpsProxyAgent = require("https-proxy-agent");
 
-    constructor() {
-    }
+@injectable()
+export default class MemberRepositoryImpl implements Member {
 
-    public isExists(): Promise<boolean> {
+    constructor() {}
+
+    public exists(): Promise<boolean> {
+        return Promise.resolve().then(() => { return true })
+
+        // TODO: GitHub exists
         const gitMember = new github.GitHub(
             ''
             //,{request: {agent: new HttpsProxyAgent(process.env.https_proxy)}}
@@ -19,5 +25,3 @@ class Member {
         });
     }
 }
-
-export = Member;
