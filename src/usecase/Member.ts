@@ -12,6 +12,6 @@ export default class Member {
     }
 
     exists(): Promise<boolean> {
-        return this.memberRepository.exists()
+        return this.memberRepository.fetch('hoge')
     }
 }

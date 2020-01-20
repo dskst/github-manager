@@ -1,3 +1,3 @@
 export default interface MemberRepository {
-    exists(): Promise<boolean>
+    fetch(id: String): Promise<boolean>
 }

@@ -9,7 +9,7 @@ export default class MemberRepositoryImpl implements Member {
 
     constructor() {}
 
-    public exists(): Promise<boolean> {
+    public fetch(id: String): Promise<boolean> {
         return Promise.resolve().then(() => { return true })
 
         // TODO: GitHub exists
