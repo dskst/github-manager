@@ -1,5 +1,7 @@
 import { injectable, inject } from "inversify"
-import MemberRepository from "../entity/repository/MemberRepository"
+import MemberRepository from "./repository/MemberRepository"
+import { GithubUser } from "../entity/github/GithubUser"
+import { UserName } from "../entity/github/UserName"
 
 @injectable()
 export default class Member {
@@ -12,6 +14,9 @@ export default class Member {
     }
 
     exists(): Promise<boolean> {
-        return this.memberRepository.fetch('hoge')
+        this.memberRepository.fetch('hoge')
+
+        // TODO: usecase
+        return Promise.resolve().then(() => { return true })
     }
 }

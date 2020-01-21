@@ -1,5 +1,7 @@
 import { injectable } from 'inversify'
-import Member from '../../entity/repository/MemberRepository'
+import Member from '../../usecase/repository/MemberRepository'
+import { GithubUser } from '../../entity/github/GithubUser'
+import { UserName } from '../../entity/github/UserName'
 import * as github from '@actions/github';
 
 // const HttpsProxyAgent = require("https-proxy-agent");
@@ -9,19 +11,23 @@ export default class MemberRepositoryImpl implements Member {
 
     constructor() {}
 
-    public fetch(id: String): Promise<boolean> {
-        return Promise.resolve().then(() => { return true })
+    async fetch(id: string): Promise<GithubUser> {
 
-        // TODO: GitHub exists
+        // TODO: GitHub exists use secret
         const gitMember = new github.GitHub(
             ''
             //,{request: {agent: new HttpsProxyAgent(process.env.https_proxy)}}
         );
         const response = gitMember.users.getByUsername({username:'dskst'});
+
         return response.then((value) => {
-            return value.data.login != null;
+            return GithubUser.build(
+                UserName.of(value.data.login)
+            )
         }).catch((error) => {
-            return false;
+            return GithubUser.build(
+                UserName.of('')
+            ) 
         });
     }
 }
