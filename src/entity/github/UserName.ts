@@ -10,4 +10,8 @@ export class UserName {
     toString = (): string => {
         return this._userName
     }
+
+    equals = (param: any): boolean => {
+        return param != null && this._userName === param
+    }
 }

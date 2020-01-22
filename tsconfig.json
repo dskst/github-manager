@@ -10,9 +10,10 @@
         "emitDecoratorMetadata": true
     },
     "include": [
-        "src/*", "src/runner/exist_member.ts"
+        "src/*", "src/runner/exist_member.ts", "src/infrastructure/repository/__mocks__"
     ],
     "exclude": [
-        "node_module"
+        "node_module",
+        "**/__mocks__"
     ]
 }

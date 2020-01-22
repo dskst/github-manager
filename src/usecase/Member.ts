@@ -13,10 +13,13 @@ export default class Member {
         this.memberRepository = memberRepository
     }
 
-    exists(): Promise<boolean> {
-        this.memberRepository.fetch('hoge')
-
-        // TODO: usecase
+    async exists(): Promise<boolean> {
+        // FIXME: this is just test
         return Promise.resolve().then(() => { return true })
+        
+        const user = await this.memberRepository.fetch('hoge')
+
+        // TODO: Fix draft
+        return Promise.resolve().then(() => { return user.userName.equals('mockuser') })
     }
 }
