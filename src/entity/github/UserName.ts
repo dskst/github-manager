@@ -1,20 +1,13 @@
-import { ValueObject } from '../ValueObject'
+export class UserName {
 
-interface UserNameProps {
-    value: string
-}
-
-export class UserName extends ValueObject<UserNameProps> {
-
-    private constructor(props: UserNameProps) {
-        super(props)
+    private constructor(private _userName: string) {
     }
 
-    get value(): string {
-        return this.props.value
+    static of(userName: string): UserName {
+        return new UserName(userName)
     }
 
-    public static of(userName: string): UserName {
-        return new UserName({ value: userName})
+    toString = (): string => {
+        return this._userName
     }
 }

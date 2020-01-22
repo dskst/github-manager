@@ -1,23 +1,25 @@
 import { UserName }  from './UserName'
-import { ValueObject } from '../ValueObject'
+import { EmailAddress } from '../EmailAddress'
 
 interface GithubUserProps {
-    userName: UserName
+    readonly userName: UserName
+    readonly emailAddress: EmailAddress
 }
 
-export class GithubUser extends ValueObject<GithubUserProps>{
+export class GithubUser {
+
+    private constructor(private props: GithubUserProps) {
+    }
+
+    public static build(props: GithubUserProps) {
+        return new GithubUser(props)
+    }
 
     get userName(): UserName {
         return this.props.userName
     }
 
-    private constructor(props: GithubUserProps) {
-        super(props)
-    }
-
-    public static build(userName: UserName) {
-        return new GithubUser({
-            userName
-        })
+    get emailAddress(): EmailAddress {
+        return this.props.emailAddress
     }
 }
