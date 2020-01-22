@@ -13,12 +13,9 @@ export default class Member {
     }
 
     async exists(userName: UserName): Promise<boolean> {
-        // FIXME: this is just test
-        return Promise.resolve().then(() => { return true })
-
-        const user = await this.memberRepository.fetch('hoge')
+        const user = await this.memberRepository.fetch(userName.toString())
 
         // TODO: Fix draft
-        return Promise.resolve().then(() => { return user.userName.equals('mockuser') })
+        return Promise.resolve().then(() => { return user.userName.equals(userName.toString()) })
     }
 }

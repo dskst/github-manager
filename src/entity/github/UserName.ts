@@ -12,6 +12,7 @@ export class UserName {
     }
 
     equals = (param: any): boolean => {
+        // TODO: Object compare
         return param != null && this._userName === param
     }
 }

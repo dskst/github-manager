@@ -12,8 +12,7 @@ describe('Member', () => {
 
      describe('exists', () => {
           test('Exists on GitHub', async () => {
-               return await expect(new Member(new MemberRepositoryImpl()).exists(UserName.of('mockuser'))).resolves.toBeTruthy()
-               
+               return await expect(new Member(new MemberRepositoryImpl()).exists(UserName.of('hogeuser'))).resolves.toBeTruthy()
           })
      })
 });
