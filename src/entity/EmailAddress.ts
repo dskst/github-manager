@@ -1,13 +1,12 @@
-export class EmailAddress {
-
+export default class EmailAddress {
+    // eslint-disable-next-line no-useless-constructor
     private constructor(private _emailAddress: string) {
+        // do nothing
     }
 
     static of(emailAddress: string): EmailAddress {
-        return new EmailAddress(emailAddress)
+        return new EmailAddress(emailAddress);
     }
 
-    toString = (): string => {
-        return this._emailAddress
-    }
+    toString = (): string => this._emailAddress;
 }
