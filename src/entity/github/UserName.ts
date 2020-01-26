@@ -1,18 +1,17 @@
-export class UserName {
-
+export default class UserName {
+    // eslint-disable-next-line no-useless-constructor
     private constructor(private _userName: string) {
+        // do nothing
     }
 
     static of(userName: string): UserName {
-        return new UserName(userName)
+        return new UserName(userName);
     }
 
-    toString = (): string => {
-        return this._userName
-    }
+    toString = (): string => this._userName;
 
-    equals = (param: any): boolean => {
+    equals = (param: any): boolean => (
         // TODO: Object compare
-        return param != null && this._userName === param
-    }
+        param != null && this._userName === param
+    );
 }

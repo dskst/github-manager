@@ -1,4 +1,4 @@
-import { UserName }  from './UserName'
+import UserName  from './UserName'
 import { EmailAddress } from '../EmailAddress'
 
 interface GithubUserProps {
