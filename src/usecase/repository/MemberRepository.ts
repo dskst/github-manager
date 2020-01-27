@@ -1,4 +1,4 @@
-import GithubUser from '../../entity/github/GithubUser'
+import GithubUser from 'src/entity/github/GithubUser'
 
 export default interface MemberRepository {
     fetch(id: string): Promise<GithubUser>
