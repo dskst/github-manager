@@ -1,0 +1,46 @@
+{
+    "env": {
+        "es6": true,
+        "node": true
+    },
+    "extends": [
+        "airbnb-base"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "settings": {
+        // "import/parsers": {
+        //     "@typescript-eslint/parser": [".ts", ".tsx"]
+        // },
+        // "import/resolver": "webpack"
+        "import/resolver": {
+            "node": {
+                // "moduleDirectory": ["src"],
+                // "paths": ["src"],
+                "extensions": [".js", ".jsx", ".ts", ".tsx"]
+            }
+        }
+    },
+    "rules": {
+        "indent": ["error", 4],
+        "no-underscore-dangle": ["error", {"allowAfterThis": true}],
+        "no-unused-vars": ["error", {"argsIgnorePattern": "^_"}],
+        "import/no-unresolved": "off", // TODO: Change flag to on
+        "semi": ["error", "never", {"beforeStatementContinuationChars": "never"}],
+        "semi-spacing": ["error", {"after": true, "before": false}],
+        "semi-style": ["error", "first"],
+        "no-extra-semi": "error",
+        "no-unexpected-multiline": "error",
+        "no-unreachable": "error"
+    }
+}

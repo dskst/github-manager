@@ -1,6 +1,6 @@
 import Member from '../../src/usecase/Member'
 import MemberRepositoryImpl from '../../src/infrastructure/repository/MemberRepositoryImpl'
-import { UserName } from '../../src/entity/github/UserName';
+import UserName from '../../src/entity/github/UserName';
 
 // Make mock
 jest.mock('../../src/infrastructure/repository/MemberRepositoryImpl')

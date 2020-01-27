@@ -6,9 +6,9 @@ import MemberRepositoryImpl from "./infrastructure/repository/MemberRepositoryIm
 
 const container = new Container()
 container
-    .bind<MemberRepository>("MemberRepository")
+    .bind<MemberRepository>('MemberRepository')
     .to(MemberRepositoryImpl)
     .inRequestScope()
-container.bind<Member>("Member").to(Member)
+container.bind<Member>('Member').to(Member)
 
 export default container

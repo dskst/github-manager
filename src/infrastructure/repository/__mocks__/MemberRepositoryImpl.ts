@@ -1,6 +1,6 @@
-import { GithubUser } from '../../../entity/github/GithubUser'
-import { UserName } from '../../../entity/github/UserName'
-import { EmailAddress } from '../../../entity/EmailAddress'
+import GithubUser from '../../../entity/github/GithubUser'
+import UserName from '../../../entity/github/UserName'
+import EmailAddress from '../../../entity/EmailAddress'
 
 const mock =  jest.fn().mockImplementation(() => {
         return {

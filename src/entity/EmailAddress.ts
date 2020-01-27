@@ -5,8 +5,8 @@ export default class EmailAddress {
     }
 
     static of(emailAddress: string): EmailAddress {
-        return new EmailAddress(emailAddress);
+        return new EmailAddress(emailAddress)
     }
 
-    toString = (): string => this._emailAddress;
+    toString = (): string => this._emailAddress
 }

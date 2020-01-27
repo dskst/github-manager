@@ -7,7 +7,11 @@
         "outDir": "./dist",
         "moduleResolution": "node",
         "experimentalDecorators": true,
-        "emitDecoratorMetadata": true
+        "emitDecoratorMetadata": true,
+        "baseUrl": "./",
+        "paths": {
+            "src/*": ["src/*"]
+        }
     },
     "include": [
         "src/*", "src/runner/exist_member.ts", "src/infrastructure/repository/__mocks__"

@@ -5,7 +5,7 @@ export default class UserName {
     }
 
     static of(userName: string): UserName {
-        return new UserName(userName);
+        return new UserName(userName)
     }
 
     toString = (): string => this._userName;
