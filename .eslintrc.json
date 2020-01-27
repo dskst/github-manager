@@ -19,14 +19,8 @@
         "@typescript-eslint"
     ],
     "settings": {
-        // "import/parsers": {
-        //     "@typescript-eslint/parser": [".ts", ".tsx"]
-        // },
-        // "import/resolver": "webpack"
         "import/resolver": {
             "node": {
-                // "moduleDirectory": ["src"],
-                // "paths": ["src"],
                 "extensions": [".js", ".jsx", ".ts", ".tsx"]
             }
         }
