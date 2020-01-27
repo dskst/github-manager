@@ -1,6 +1,6 @@
-import { injectable, inject } from "inversify"
-import MemberRepository from "./repository/MemberRepository"
-import UserName from "../entity/github/UserName"
+import { injectable, inject } from 'inversify'
+import MemberRepository from 'src/repository/MemberRepository'
+import UserName from 'src/entity/github/UserName'
 
 @injectable()
 export default class Member {
@@ -16,6 +16,6 @@ export default class Member {
         const user = await this._memberRepository.fetch(userName.toString())
 
         // TODO: Fix draft
-        return Promise.resolve().then(() => { return user.userName.equals(userName.toString()) })
+        return Promise.resolve().then(() => user.userName.equals(userName.toString()))
     }
 }
