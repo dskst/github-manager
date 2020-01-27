@@ -1,9 +1,8 @@
 import 'reflect-metadata'
-import container from '../inversify.config'
-
+import container from 'src/inversify.config'
 import * as core from '@actions/core'
-import Member from '../usecase/Member'
-import UserName from '../entity/github/UserName'
+import Member from 'src/usecase/Member'
+import UserName from 'src/entity/github/UserName'
 
 const run = async () => {
     try {
@@ -13,5 +12,4 @@ const run = async () => {
         core.setFailed(error.message)
     }
 }
-
 run()
