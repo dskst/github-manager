@@ -14,10 +14,12 @@
         }
     },
     "include": [
-        "src/*", "src/runner/exist_member.ts", "src/infrastructure/repository/__mocks__"
+        "src/*",
+        "src/runner/exist_member.ts",
+        "src/infrastructure/repository/__mocks__"
     ],
     "exclude": [
         "node_module",
-        "**/__mocks__"
+        // "**/__mocks__" TODO: Not enabled resolver on exclude
     ]
 }

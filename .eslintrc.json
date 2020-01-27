@@ -28,9 +28,9 @@
     "rules": {
         "indent": ["error", 4],
         "no-underscore-dangle": ["error", {"allowAfterThis": true}],
-        "no-unused-vars": ["error", {"argsIgnorePattern": "^_"}],
         "import/no-unresolved": "off", // TODO: Change flag to on
         "no-unused-vars": "off", // TODO: Change flag to on
+        // "no-unused-vars": ["error", {"argsIgnorePattern": "^_"}],
         "semi": ["error", "never", {"beforeStatementContinuationChars": "never"}],
         "semi-spacing": ["error", {"after": true, "before": false}],
         "semi-style": ["error", "first"],

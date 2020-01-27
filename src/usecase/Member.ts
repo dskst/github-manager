@@ -1,5 +1,5 @@
 import { injectable, inject } from 'inversify'
-import MemberRepository from 'src/repository/MemberRepository'
+import MemberRepository from 'src/usecase/repository/MemberRepository'
 import UserName from 'src/entity/github/UserName'
 
 @injectable()
