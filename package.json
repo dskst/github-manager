@@ -2,7 +2,6 @@
   "name": "github-manager",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module",
   "directories": {
     "test": "tests"
   },
@@ -31,21 +30,17 @@
   },
   "devDependencies": {
     "@types/jest": "^24.9.0",
-    "@types/node": "^13.5.0",
-    "@types/webpack": "^4.41.3",
     "@typescript-eslint/eslint-plugin": "^2.17.0",
     "@typescript-eslint/parser": "^2.17.0",
     "acorn": "^7.1.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-import-resolver-webpack": "^0.12.1",
     "eslint-plugin-import": "^2.20.0",
     "http-proxy-agent": "^3.0.0",
     "https-proxy-agent": "^4.0.0",
     "jest": "^24.9.0",
     "ts-jest": "^24.3.0",
-    "typescript": "^3.7.4",
-    "webpack": "^4.41.5"
+    "typescript": "^3.7.4"
   },
   "jest": {
     "setupFiles": [

@@ -1,34 +1,35 @@
 import { injectable } from 'inversify'
 import * as github from '@actions/github'
-import GithubUser from 'src/entity/github/GithubUser'
-import UserName from 'src/entity/github/UserName'
-import EmailAddress from 'src/entity/EmailAddress'
-import MemberRepository from 'src/usecase/repository/MemberRepository'
-
-// const HttpsProxyAgent = require("https-proxy-agent");
+// eslint-disable-next-line import/no-extraneous-dependencies
+// import HttpsProxyAgent from 'https-proxy-agent'
+import GithubUser from '../../entity/github/GithubUser'
+import UserName from '../../entity/github/UserName'
+import EmailAddress from '../../entity/EmailAddress'
+import MemberRepository from '../../usecase/repository/MemberRepository'
 
 @injectable()
 export default class MemberRepositoryImpl implements MemberRepository {
-    async fetch(id: string): Promise<GithubUser> {
-
+    fetch = async (id: string): Promise<GithubUser> => {
         // TODO: GitHub exists use secret
         const gitMember = new github.GitHub(
-            ''
-            // ,{request: {agent: new HttpsProxyAgent(process.env.https_proxy)}}
+            '',
+            // { request: { agent: new HttpsProxyAgent(process.env.https_proxy) } },
         )
-        const response = gitMember.users.getByUsername({username:'dskst'});
+
+        const response = gitMember.users.getByUsername({ username: id })
 
         // TODO: Fix Draft
-        return response.then((value) => {
+        try {
+            const value = await response
             return GithubUser.build({
                 userName: UserName.of(value.data.login),
-                emailAddress: EmailAddress.of(value.data.email)
+                emailAddress: EmailAddress.of(value.data.email),
             })
-        }).catch((error) => {
+        } catch (e) {
             return GithubUser.build({
                 userName: UserName.of(''),
-                emailAddress: EmailAddress.of('')
-            }) 
-        })
+                emailAddress: EmailAddress.of(''),
+            })
+        }
     }
 }

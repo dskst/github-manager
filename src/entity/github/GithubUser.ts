@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
-import UserName from 'src/entity/github/UserName'
-import EmailAddress from 'src/entity/EmailAddress'
+import UserName from './UserName'
+import EmailAddress from '../EmailAddress'
 
 interface GithubUserProps {
     readonly userName: UserName

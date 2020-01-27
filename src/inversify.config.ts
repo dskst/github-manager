@@ -1,8 +1,8 @@
 import { Container } from 'inversify'
 
-import Member from 'src/usecase/Member'
-import MemberRepository from 'src/usecase/repository/MemberRepository'
-import MemberRepositoryImpl from 'src/infrastructure/repository/MemberRepositoryImpl'
+import Member from './usecase/Member'
+import MemberRepository from './usecase/repository/MemberRepository'
+import MemberRepositoryImpl from './infrastructure/repository/MemberRepositoryImpl'
 
 const container = new Container()
 container

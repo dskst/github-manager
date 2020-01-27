@@ -1,8 +1,8 @@
 import 'reflect-metadata'
-import container from 'src/inversify.config'
 import * as core from '@actions/core'
-import Member from 'src/usecase/Member'
-import UserName from 'src/entity/github/UserName'
+import container from '../inversify.config'
+import Member from '../usecase/Member'
+import UserName from '../entity/github/UserName'
 
 const run = async () => {
     try {
