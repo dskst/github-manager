@@ -1,18 +1,21 @@
+/* eslint-disable no-undef */
 import Member from '../../src/usecase/Member'
 import MemberRepositoryImpl from '../../src/infrastructure/repository/MemberRepositoryImpl'
-import UserName from '../../src/entity/github/UserName';
+import UserName from '../../src/entity/github/UserName'
 
-// Make mock
+// eslint-disable-next-line no-undef
 jest.mock('../../src/infrastructure/repository/MemberRepositoryImpl')
 
 describe('Member', () => {
-     beforeEach(() => {
-          // TODO: Clear data at mock
-     })
+    beforeEach(() => {
+        // TODO: Clear data at mock
+    })
 
-     describe('exists', () => {
-          test('Exists on GitHub', async () => {
-               return await expect(new Member(new MemberRepositoryImpl()).exists(UserName.of('hogeuser'))).resolves.toBeTruthy()
-          })
-     })
-});
+    describe('exists', () => {
+        // eslint-disable-next-line arrow-body-style
+        test('Exists on GitHub', async () => {
+            // eslint-disable-next-line no-return-await
+            return await expect(new Member(new MemberRepositoryImpl()).exists(UserName.of('hogeuser'))).resolves.toBeTruthy()
+        })
+    })
+})
