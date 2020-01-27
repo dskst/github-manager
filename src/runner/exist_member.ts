@@ -1,5 +1,6 @@
 import 'reflect-metadata'
 import * as core from '@actions/core'
+// eslint-disable-next-line import/extensions
 import container from '../inversify.config'
 import Member from '../usecase/Member'
 import UserName from '../entity/github/UserName'
