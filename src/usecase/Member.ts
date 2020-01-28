@@ -16,6 +16,6 @@ export default class Member {
         const user = await this._memberRepository.fetch(userName.toString())
 
         // TODO: Fix draft
-        return Promise.resolve().then(() => user.userName.equals(userName.toString()))
+        return Promise.resolve().then(() => user.userName.equals(userName))
     }
 }

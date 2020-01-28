@@ -12,10 +12,9 @@ export default class MemberRepositoryImpl implements MemberRepository {
     fetch = async (id: string): Promise<GithubUser> => {
         // TODO: GitHub exists use secret
         const gitMember = new github.GitHub(
-            '',
+            process.env.GITHUB_TOKEN,
             // { request: { agent: new HttpsProxyAgent(process.env.https_proxy) } },
         )
-
         const response = gitMember.users.getByUsername({ username: id })
 
         // TODO: Fix Draft

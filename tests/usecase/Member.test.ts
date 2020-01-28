@@ -15,7 +15,7 @@ describe('Member', () => {
         // eslint-disable-next-line arrow-body-style
         test('Exists on GitHub', async () => {
             // eslint-disable-next-line no-return-await
-            return await expect(new Member(new MemberRepositoryImpl()).exists(UserName.of('hogeuser'))).resolves.toBeTruthy()
+            return await expect(new Member(new MemberRepositoryImpl()).exists(UserName.of('dskst'))).resolves.toBeTruthy()
         })
     })
 })

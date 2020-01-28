@@ -15,3 +15,5 @@ jobs:
         run: tsc
       - name: Is exist member 
         uses: ./.github/actions/exist_member
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

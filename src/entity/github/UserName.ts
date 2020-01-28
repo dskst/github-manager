@@ -11,7 +11,8 @@ export default class UserName {
     toString = (): string => this._userName;
 
     equals = (param: any): boolean => (
-        // TODO: Object compare
-        param != null && this._userName === param
+        param instanceof UserName
+            ? param.toString() === this._userName.toString()
+            : false
     );
 }
