@@ -13,7 +13,7 @@ describe('Member', () => {
 
     describe('exists', () => {
         // eslint-disable-next-line arrow-body-style
-        test('Exists on GitHub', async () => {
+        test('return true when exists', async () => {
             // eslint-disable-next-line no-return-await
             return await expect(new Member(new MemberRepositoryImpl()).exists(UserName.of('dskst'))).resolves.toBeTruthy()
         })
