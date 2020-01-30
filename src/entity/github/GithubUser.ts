@@ -14,6 +14,7 @@ export default class GithubUser {
     }
 
     public static build(props: GithubUserProps) {
+        // TODO: validation
         return new GithubUser(props)
     }
 

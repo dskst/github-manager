@@ -5,6 +5,7 @@ export default class UserName {
     }
 
     static of(userName: string): UserName {
+        // TODO: validation
         return new UserName(userName)
     }
 

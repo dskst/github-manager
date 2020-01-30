@@ -5,6 +5,7 @@ export default class EmailAddress {
     }
 
     static of(emailAddress: string): EmailAddress {
+        // TODO: validation
         return new EmailAddress(emailAddress)
     }
 
