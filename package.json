@@ -21,7 +21,7 @@
   "homepage": "https://github.com/dskst/github-manager#readme",
   "description": "GitHub management, use git",
   "dependencies": {
-    "@actions/core": "^1.2.6",
+    "@actions/core": "^1.9.1",
     "@actions/github": "^2.0.1",
     "inversify": "^5.0.1",
     "path": "^0.12.7",
